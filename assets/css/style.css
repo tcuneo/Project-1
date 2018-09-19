@@ -7,9 +7,9 @@ html {
     box-sizing: inherit;
   }
   
-  body {
+  /* body {
     background-color: black;
-  }
+  } */
   
   body > div {
     margin: 120px auto;

@@ -25,6 +25,31 @@ var gameData = [
   
   var map;
   
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCcyoVayD7v24_L1HMY5uuGTlGrywNjSiM",
+    authDomain: "pacman-project.firebaseapp.com",
+    databaseURL: "https://pacman-project.firebaseio.com",
+    projectId: "pacman-project",
+    storageBucket: "pacman-project.appspot.com",
+    messagingSenderId: "913823810669"
+  };
+  firebase.initializeApp(config);
+
+
+  // Timer
+  // $(".start-timer").on("click", function (){
+  //     var timeLeft = 30 
+  //   $("#countdown").countdowntimer({
+  //      timeLeft = i--,
+  //      seconds : 30‚
+  //      size : "lg"
+  //   });
+  //   $
+  // });
+
+
   /*starting location of pacman, "0" being first count*/
   var pacman = {
     x: 6,
