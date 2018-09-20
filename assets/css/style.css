@@ -40,10 +40,6 @@ html {
     transform: scale(0.3);
   }
   
-  #leaderboard {
-    height: 200px;
-    width:100%;
-  }
   /*wimage displayed depending on where pacman is looking*/
   .pacman {
     /* Need to add image urls or other fun links for each direction pacman (or dog, etc)
