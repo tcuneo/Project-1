@@ -1,18 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
+  
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>PacDog</title>
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
   <link rel="stylesheet" href="assets/css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
 
 <body>
-
+  <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+  <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDUW3DG7AzpM0UKrY0u12pDVw3LH9OWv50",
+        authDomain: "pacdog-bbea1.firebaseapp.com",
+        databaseURL: "https://pacdog-bbea1.firebaseio.com",
+        projectId: "pacdog-bbea1",
+        storageBucket: "pacdog-bbea1.appspot.com",
+        messagingSenderId: "760721378032"
+      };
+      firebase.initializeApp(config);
+  </script>
   <script src="assets/javascript/app.js"></script>
   
 </body>

@@ -14,8 +14,8 @@ var gameData = [
     [1,1,1,1,1,1,1,1,1,1,1,1,1]
 
   ];
-  
-  
+
+
   const WALL   = 1;
   const COIN   = 2;
   const GROUND = 3;
@@ -29,7 +29,8 @@ var gameData = [
   var pacman = {
     x: 6,
     y: 4,
-    direction: 'right'
+    direction: 'right',
+    score: 0
   };
 
   function createTiles(data) {
@@ -91,7 +92,10 @@ var gameData = [
   // and adds it to the page.
   function drawMap() {
     map = document.createElement('div');
-  
+    score = document.createElement('p');
+    score.innerHTML = "Score: <span class='score'>0</span>";
+    
+
     var tiles = createTiles(gameData);
     for (var tile of tiles) {
       map.appendChild(tile);
@@ -107,58 +111,51 @@ var gameData = [
 
 
 // Movement Functions
-  function moveDown() {
-    pacman.direction = "down";
-    if (gameData[pacman.y+1][pacman.x] !== WALL) {
+  function movePacman(direction) {
+    pacman.direction = direction
+    var x = pacman.x;
+    var y = pacman.y;
+// Update coordinate for next move
+    if (direction === 'down'){
+      y += 1;  
+    } else if (direction === 'left'){
+      x -= 1;
+    } else if (direction === 'right'){
+      x += 1;
+    } else if (direction === 'up'){
+      y -= 1;
+    }
+    // if next move is on a WALL
+    if (gameData[y][x] !== WALL) {   
+      // if next move is on a COIN
+      if (gameData[y][x] === COIN) {
+        console.log('NOM NOM');
+        pacman.score +=1;
+      }
+
+      // sets the previous position to GROUND
       gameData[pacman.y][pacman.x] = GROUND;
-      pacman.y = pacman.y + 1 ;
-      gameData[pacman.y][pacman.x] = PACMAN;
+      pacman.x = x;
+      pacman.y = y;
+      gameData[y][x] = PACMAN;
     }
   }
-  
-  function moveUp() {
-    pacman.direction = "up";
-    if (gameData[pacman.y-1][pacman.x] !== WALL) {
-      gameData[pacman.y][pacman.x] = GROUND;
-      pacman.y = pacman.y - 1;
-      gameData[pacman.y][pacman.x] = PACMAN;
-    }
-  }
-  
-  function moveLeft() {
-    pacman.direction = "left";
-    if (gameData[pacman.y][pacman.x-1] !== WALL) {
-      gameData[pacman.y][pacman.x] = GROUND;
-      pacman.x = pacman.x - 1 ;
-      gameData[pacman.y][pacman.x] = PACMAN;
-    }
-  }
-  
-  function moveRight() {
-    pacman.direction = "right";
-    if (gameData[pacman.y][pacman.x+1] !== WALL) {
-      gameData[pacman.y][pacman.x] = GROUND;
-      pacman.x = pacman.x + 1 ;
-      gameData[pacman.y][pacman.x] = PACMAN;
-    }
-  }
-  
- 
+
   function setupKeyboardControls() {
     document.addEventListener('keydown', function (e) {
   
       
       if (e.keyCode === 37) {         // left arrow is 37
-        moveLeft();
+        movePacman('left');
   
       } else if (e.keyCode === 38) {  // up arrow is 38
-        moveUp();
+        movePacman('up');
   
       } else if (e.keyCode === 39){   // right arrow is 39
-        moveRight();
+        movePacman('right');
   
       } else if (e.keyCode === 40){   // down arrow is 40
-        moveDown();
+        movePacman('down');
       }
   
       // After every move, we erase the map and redraw it.
