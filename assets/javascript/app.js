@@ -30,7 +30,7 @@ var gameData = [
     x: 6,
     y: 4,
     direction: 'right',
-    score: 0
+    score: 0,
   };
 
   function createTiles(data) {
@@ -130,7 +130,9 @@ var gameData = [
       // if next move is on a COIN
       if (gameData[y][x] === COIN) {
         console.log('NOM NOM');
-        pacman.score +=1;
+        pacman.score +=5;
+        console.log(pacman.score);
+        
       }
 
       // sets the previous position to GROUND
@@ -139,6 +141,11 @@ var gameData = [
       pacman.y = y;
       gameData[y][x] = PACMAN;
     }
+  }
+
+
+  function nomCount(){
+    
   }
 
   function setupKeyboardControls() {
