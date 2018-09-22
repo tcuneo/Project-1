@@ -11,7 +11,7 @@ html {
     background-color: #9e098a;
   }
   
-  body > div {
+  body > div { 
     margin: 120px auto;
     text-align: center;
   }
@@ -43,12 +43,16 @@ html {
   
   /*wimage displayed depending on where pacman is looking*/
   .pacman {
-  
-    background-image: url("../Images/Sunny_PacDog.png");
+    
   }
   
+
+/*  .pacman img{
+    width: 50px;
+    height: 50px;
+  }*/
   
-  .left {
+/*  .left {
     background-image: url("/Users/AdventureGirl/Desktop/Project-1/Project-1/assets/Images/Sunny_PacDog.png");
   }
   
@@ -58,7 +62,7 @@ html {
   
   .down {
     background-image: url("/Users/AdventureGirl/Desktop/Project-1/Project-1/assets/Images/Sunny_PacDog.png");
-  }
+  }*/
 
   .dogcatcher1 {
     background-image: url("");
