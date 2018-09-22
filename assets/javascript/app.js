@@ -131,7 +131,7 @@ var gameData = [
         console.log('NOM NOM');
         pacman.score +=5;
         console.log(pacman.score);
-        $("#highscore-div").html(pacman.score);
+        $("#highscore-div").html("Highscore: " + pacman.score);
         
       }
 
@@ -150,7 +150,7 @@ var gameData = [
 
   function setupKeyboardControls() {
     document.addEventListener('keydown', function (e) {
-  
+      event.preventDefault();
       
       if (e.keyCode === 37) {         // left arrow is 37
         movePacman('left');
