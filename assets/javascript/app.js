@@ -131,6 +131,7 @@ var gameData = [
         console.log('NOM NOM');
         pacman.score +=5;
         console.log(pacman.score);
+        $("#highscore-div").html(pacman.score);
         
       }
 
