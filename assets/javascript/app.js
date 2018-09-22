@@ -29,16 +29,10 @@ var gameData = [
   
   /*starting location of pacman, "0" being first count*/
   var pacman = {
-<<<<<<< HEAD
-    x: 6,
-    y: 4,
-    direction: 'right',
-    score: 0,
-=======
     x: 10,
     y: 8,
+    score: 0,
     direction: 'right'
->>>>>>> 7bc2f9aae88574ba62f8f96a376d55450df18a9c
   };
 
   function createTiles(data) {
@@ -99,11 +93,8 @@ var gameData = [
   // This function creates a map element, fills it with tiles,
   // and adds it to the page.
   function drawMap() {
-    map = document.createElement('div');
-    score = document.createElement('p');
-    score.innerHTML = "Score: <span class='score'>0</span>";
+   map = document.createElement('div');
     
-
     var tiles = createTiles(gameData);
     for (var tile of tiles) {
       map.appendChild(tile);
