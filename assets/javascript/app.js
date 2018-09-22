@@ -31,6 +31,7 @@ var gameData = [
   var pacman = {
     x: 10,
     y: 8,
+    score: 0,
     direction: 'right'
   };
 
@@ -92,11 +93,8 @@ var gameData = [
   // This function creates a map element, fills it with tiles,
   // and adds it to the page.
   function drawMap() {
-    map = document.createElement('div');
-    score = document.createElement('p');
-    score.innerHTML = "Score: <span class='score'>0</span>";
+   map = document.createElement('div');
     
-
     var tiles = createTiles(gameData);
     for (var tile of tiles) {
       map.appendChild(tile);
@@ -131,7 +129,9 @@ var gameData = [
       // if next move is on a COIN
       if (gameData[y][x] === COIN) {
         console.log('NOM NOM');
-        pacman.score +=1;
+        pacman.score +=5;
+        console.log(pacman.score);
+        
       }
 
       // sets the previous position to GROUND
@@ -140,6 +140,11 @@ var gameData = [
       pacman.y = y;
       gameData[y][x] = PACMAN;
     }
+  }
+
+
+  function nomCount(){
+    
   }
 
   function setupKeyboardControls() {
