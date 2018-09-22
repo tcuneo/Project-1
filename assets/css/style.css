@@ -17,6 +17,7 @@ html {
   }
   
   
+  
   /*game squares*/
   .tile {
     
@@ -42,23 +43,41 @@ html {
   
   /*wimage displayed depending on where pacman is looking*/
   .pacman {
-    /* Need to add image urls or other fun links for each direction pacman (or dog, etc)
-    is looking - right now just cat favicon with black background*/
-    background-image: url("https://image.freepik.com/free-icon/github-logo-silhouette-in-a-square_318-54633.jpg");
+  
+    background-image: url("../Images/Sunny_PacDog.png");
   }
   
+  
   .left {
-    background-image: url("https://image.freepik.com/free-icon/github-logo-silhouette-in-a-square_318-54633.jpg");
+    background-image: url("/Users/AdventureGirl/Desktop/Project-1/Project-1/assets/Images/Sunny_PacDog.png");
   }
   
   .up {
-    background-image: url("https://image.freepik.com/free-icon/github-logo-silhouette-in-a-square_318-54633.jpg");
+    background-image: url("/Users/AdventureGirl/Desktop/Project-1/Project-1/assets/Images/Sunny_PacDog.png");
   }
   
   .down {
-    background-image: url("https://image.freepik.com/free-icon/github-logo-silhouette-in-a-square_318-54633.jpg");
+    background-image: url("/Users/AdventureGirl/Desktop/Project-1/Project-1/assets/Images/Sunny_PacDog.png");
   }
 
   .dogcatcher1 {
-    background-image: url("https://image.freepik.com/free-icon/github-logo-silhouette-in-a-square_318-54633.jpg");
+    background-image: url("");
   }
+
+  /* Beginning of css for selecting PacDog image*/
+div.rounded {
+  width: 50%;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+}
+label {
+  display: block;
+  background-color: cornflowerblue;
+}
+input {
+  display: block;
+
+}
+
+/*End of css for selecting an image*/

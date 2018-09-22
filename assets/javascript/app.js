@@ -35,6 +35,31 @@ var gameData = [
     direction: 'right'
   };
 
+  /*js for user adding new image for PacDog*/
+  document.getElementById('upload-file').addEventListener('change', function() {
+    var file;
+    var destination = document.getElementById('destination');
+    /*destination.innerHTML = '';*/
+  
+    for(var x = 0, xlen = this.files.length; x < xlen; x++) {
+      file = this.files[x];
+      if(file.type.indexOf('image') != -1) { 
+  
+        var reader = new FileReader();
+  
+        reader.onload = function(e) {
+          var img = new Image();
+          img.src = e.target.result; 
+          $(".packman").attr("background-image", img.src);
+          // pacman.appendChild(img);
+        };
+        
+        reader.readAsDataURL(file);
+      }
+    }
+  });
+/*end of js for user adding new image for PacDog*/
+
   function createTiles(data) {
 
     // We'll keep the DOM elements in an array.
