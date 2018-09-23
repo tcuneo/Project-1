@@ -145,7 +145,8 @@ $(document).ready(function() {
         console.log("NOM NOM");
         pacman.score += 5;
         console.log(pacman.score);
-        $("#highscore-div").html(pacman.score);
+        $("#highscore-div").html("Highscore: " + pacman.score);
+
       }
 
       // sets the previous position to GROUND
@@ -159,19 +160,21 @@ $(document).ready(function() {
   function nomCount() {}
 
   function setupKeyboardControls() {
-    document.addEventListener("keydown", function(e) {
-      if (e.keyCode === 37) {
-        // left arrow is 37
-        movePacman("left");
-      } else if (e.keyCode === 38) {
-        // up arrow is 38
-        movePacman("up");
-      } else if (e.keyCode === 39) {
-        // right arrow is 39
-        movePacman("right");
-      } else if (e.keyCode === 40) {
-        // down arrow is 40
-        movePacman("down");
+    document.addEventListener('keydown', function (e) {
+      event.preventDefault();
+      
+      if (e.keyCode === 37) {         // left arrow is 37
+        movePacman('left');
+  
+      } else if (e.keyCode === 38) {  // up arrow is 38
+        movePacman('up');
+  
+      } else if (e.keyCode === 39){   // right arrow is 39
+        movePacman('right');
+  
+      } else if (e.keyCode === 40){   // down arrow is 40
+        movePacman('down');
+
       }
 
       // After every move, we erase the map and redraw it.
