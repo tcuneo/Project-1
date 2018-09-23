@@ -1,5 +1,29 @@
 
 /*creating the game board - pretty simple at this point*/
+// function bone() {
+  
+  $( document ).ready(function() {
+    // your JavaScript code here...
+var giphyurl;
+
+var queryURL = "https://api.giphy.com/v1/stickers/search?q=bone&api_key=yYzxXmzM0JJiOROiIif2ut7eQWi76TTf";
+console.log(queryURL);
+
+// var queryURL = "https://api.giphy.com/v1/stickers/search?q=bone&api_key=yYzxXmzM0JJiOROiIif2ut7eQWi76TTf&limit=1";
+
+$.ajax({
+  url: queryURL,
+  method: "GET"
+}).then(function(response) {
+  console.log(response.data[0]);
+  console.log(response.data[0].embed_url);
+  giphyurl = response.data[0].url;
+});
+
+
+
+
+
 
 var gameData = [
 
@@ -58,6 +82,9 @@ var gameData = [
 
       } else if (col === COIN) {
         tile.classList.add('coin');
+    $(".coin").css("background-image:", giphyurl);
+    // $('.coin').css('background-image', `url(https://giphy.com/stickers/3d-skeleton-3ohhwqkQej5tvcn5NC)`);
+
 
       } else if (col === GROUND) {
         tile.classList.add('ground');
@@ -176,4 +203,5 @@ var gameData = [
   }
   
   main();
-  
+
+}); 
