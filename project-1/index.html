@@ -3,95 +3,92 @@
 <head>
   
   <meta charset="UTF-8">
-  
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-
-  <meta name="description" content="Press start to play PacDog!">
-  
-  <meta name="author" content="Created by Kirsten Millan, Taylor Cuneo, Ian Villaroel, and Jonelle Carless">
-  
   <title>PacDog</title>
-  
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
   <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
-
   <link rel="stylesheet" href="assets/css/style.css">
-  
-  <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
-
+  <link href="https://fonts.googleapis.com/css?family=Aldrich" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+  <!--Link to Bootstrap-->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
 </head>
+  <body class="row">
 
-<body>
   <div class="container">
 
+
   <div class="jumbotron">PacDog</div>
-  
-  <div class="row">
 
-    <div class="col-md-4" id="upload-picture">
-      <input type="file">
+  <!-- Instructions Row -->
+<div class="row" id="instructions">
+
+  <div class="col-md-6">
+    <h4>First: Select Your Image!</h4>
+    <p>(Insider Tip: Use An Image That Is Centered For Best Quality)</p>
+  </div>
+
+
+  <div class="col-md-6">
+      <h4>Second: Click Start To Begin Game!</h4>
+      <p>...Ready, Set, Go!</p>
+  </div>
+</div>
+
+<!-- Row for Image and Timer -->
+<div class="row">
+
+  <!--This will create div for selecting the new PacDog image-->
+  <div class="col-md-6">
+    <div id="destination" class="rounded">
+      <label for="chooseFiles">Add Your Image for PacDog!</label>
+      <input class="btn btn-primary" type="file" id="upload-file" multiple="multiple" />
     </div>
-    
-    <div class="col-md-4">
-    
+  </div>
+<!--end of html for selecting image-->
+
+    <!--Timer-->
+  <div class="col-md-6">
+    <div id="timer">
+    <button class="btn btn-primary" type="button" id="start">Start Game</button> 
+    </div>
+  </div>
+
+  <!-- <div class="col-md-3">
+      <input class="btn btn-primary" type="reset" value="Reset">
+  </div> -->
+
+</div>  
+
+<!-- High Score Div -->
+<div class="row">
+  <div class="col-md-12">
       <div id="highscore-div"></div>
-    
-    </div>
-
-    <div class="col-md-4" id="timer">
-
-        <button id="start">Start Game</button>
-    </div>
-
-  </div>  
-
-    <div class="row">
-        <div class="col-md-2"></div>
-
-        <div class="col-md-8">
-          <div id="game"></div>
-        </div>
-
-        <div class="col-md-2"></div>
-    </div>
-    
-    <div class="row">
-      <div class="col-md-12" id="footer">&copy;</div>
+  </div>
+</div>
 
 
-  
 
-      
-    </div>
-  </div> 
-</body>
 
-<script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
-<script>
-    // Initialize Firebase
-    var config = {
-      apiKey: "AIzaSyDUW3DG7AzpM0UKrY0u12pDVw3LH9OWv50",
-      authDomain: "pacdog-bbea1.firebaseapp.com",
-      databaseURL: "https://pacdog-bbea1.firebaseio.com",
-      projectId: "pacdog-bbea1",
-      storageBucket: "pacdog-bbea1.appspot.com",
-      messagingSenderId: "760721378032"
-    };
-    firebase.initializeApp(config);
-</script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
+  <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyDUW3DG7AzpM0UKrY0u12pDVw3LH9OWv50",
+        authDomain: "pacdog-bbea1.firebaseapp.com",
+        databaseURL: "https://pacdog-bbea1.firebaseio.com",
+        projectId: "pacdog-bbea1",
+        storageBucket: "pacdog-bbea1.appspot.com",
+        messagingSenderId: "760721378032"
+      };
+      firebase.initializeApp(config);
+  </script>
 
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-<script src="assets/javascript/app.js"></script>
 
+  <script src="assets/javascript/app.js"></script>
+  </div>
+</body> 
+
+</div>
 </html>

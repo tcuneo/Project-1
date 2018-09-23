@@ -1,64 +1,130 @@
+
+.jumbotron {
+  background-color: black!important;
+  font-family: 'Aldrich', sans-serif;
+  font-size: 100px;
+  color: white;
+}
+
+#instructions {
+  font-family: 'Aldrich', sans-serif;
+  color: white;  
+  padding: 20px;
+}
+
+#timer {
+  font-family: 'Aldrich', sans-serif;
+  color: white;  
+  padding: 20px;
+}
+
 /*game board size, black bkgd, centered*/
 html {
-    box-sizing: border-box;
-  }
-  
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
-  
-  body {
-    background-image: url("../images/background.jpg")
-  }
-  
-  body > div {
-    margin: 120px auto;
-    text-align: center;
-  }
-  
-  
-  /*game squares*/
-  .tile {
-    
-    width: 50px;
-    height: 50px;
-    display: inline-block;
-    vertical-align: top;
-  }
-  
-  
-  /* Walls of board (squares) */
-  .wall {
-    background-color: green;
-    border: 2px solid black;
-  }
-  
-  /* Coins bigger or smaller w/transform scale, rounded with the radius */
-  .coin {
-    background-color: yellow;
-    border-radius: 50%;
-    transform: scale(0.3);
-  }
-  
-  /*wimage displayed depending on where pacman is looking*/
-  .pacman {
-    /* Need to add image urls or other fun links for each direction pacman (or dog, etc)
-    is looking - right now just cat favicon with black background*/
-    background-image: url("https://image.freepik.com/free-icon/github-logo-silhouette-in-a-square_318-54633.jpg");
-  }
-  
-  .left {
-    background-image: url("https://image.freepik.com/free-icon/github-logo-silhouette-in-a-square_318-54633.jpg");
-  }
-  
-  .up {
-    background-image: url("https://image.freepik.com/free-icon/github-logo-silhouette-in-a-square_318-54633.jpg");
-  }
-  
-  .down {
-    background-image: url("https://image.freepik.com/free-icon/github-logo-silhouette-in-a-square_318-54633.jpg");
-  }
+  box-sizing: border-box;
+}
 
-  .dogcatcher1 {
-    background-image: url("https://image.freepik.com/free-icon/github-logo-silhouette-in-a-square_318-54633.jpg");
-  }
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: black!important;
+  padding: 20px;
+  font-family: 'Aldrich', sans-serif!important;
+}
+
+body > div { 
+  margin: 120px auto;
+  text-align: center;
+}
+
+
+
+/*game squares*/
+.tile {
+  
+  width: 40px;
+  height: 40px;
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 10%;
+}
+
+#highscore-div {
+  padding: 20px;
+  background-color: black;
+  font-family: 'Aldrich', sans-serif;
+  font-size: 30px;
+  color: white;
+}
+
+/* Walls of board (squares) */
+.wall {
+  background-color: blue;
+  border: 2px solid lightgrey;
+  
+}
+
+/* Coins bigger or smaller w/transform scale, rounded with the radius */
+.coin {
+  background-color: yellow;
+  border-radius: 50%;
+  transform: scale(0.3);
+}
+
+/*wimage displayed depending on where pacman is looking*/
+.pacman {
+  
+}
+
+
+/*  .pacman img{
+  width: 50px;
+  height: 50px;
+}*/
+
+/*  .left {
+  background-image: url("/Users/AdventureGirl/Desktop/Project-1/Project-1/assets/Images/Sunny_PacDog.png");
+}
+
+.up {
+  background-image: url("/Users/AdventureGirl/Desktop/Project-1/Project-1/assets/Images/Sunny_PacDog.png");
+}
+
+.down {
+  background-image: url("/Users/AdventureGirl/Desktop/Project-1/Project-1/assets/Images/Sunny_PacDog.png");
+}*/
+
+.dogcatcher1 {
+  background-image: url("");
+}
+
+/* Beginning of css for selecting PacDog image*/
+div.rounded {
+width: 50%;
+border-style: solid;
+border-width: 2px;
+border-radius: 5px;
+}
+label {
+  float: center;
+display: block;
+background-color: black;
+font-family: 'Aldrich', sans-serif;
+font-size: 16px;
+color: white;
+float: center;
+/* background-color: blue; */
+}
+input {
+display: block;
+padding: 20px;
+background-color: black;
+font-family: 'Aldrich', sans-serif;
+font-size: 16px;
+color: white;
+float: center;
+
+}
+
+/*End of css for selecting an image*/
