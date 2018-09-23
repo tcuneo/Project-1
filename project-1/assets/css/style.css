@@ -8,7 +8,7 @@ html {
   }
   
   body {
-    background-color: #9e098a;
+    background-image: url("../images/background.jpg")
   }
   
   body > div {
@@ -29,8 +29,8 @@ html {
   
   /* Walls of board (squares) */
   .wall {
-    background-color: blue;
-    border: 2px solid cornflowerblue;
+    background-color: green;
+    border: 2px solid black;
   }
   
   /* Coins bigger or smaller w/transform scale, rounded with the radius */

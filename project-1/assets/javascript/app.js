@@ -21,7 +21,6 @@ var gameData = [
 
   ];
 
-  $(gameData).attr('id', $(this).text('game'));
 
   const WALL   = 1;
   const COIN   = 2;
@@ -94,6 +93,7 @@ var gameData = [
     // of configured tiles.
     return tilesArray;
   }
+
   
   // This function creates a map element, fills it with tiles,
   // and adds it to the page.
@@ -191,7 +191,7 @@ var gameData = [
 
  var game = {
 
-  counter: 30,
+  counter: 5,
 
   countdown: function() {
     game.counter--;
@@ -199,28 +199,34 @@ var gameData = [
     if (game.counter === 0) {
       console.log("TIME UP");
       game.done();
+      clearInterval(timer); 
     }
   },
 
   start: function() {
     timer = setInterval(game.countdown, 1000);
 
-    $("#timer").prepend("<h2>Time Remaining: <span id='counter-number'>20</span> s</h2>");
+    $("#timer").prepend("<h2>Time Remaining: <span id='counter-number'>5</span> s</h2>");
 
     $("#start").remove();
 
 
+
   },
 
+  //  stopinterval: function(){
+
+
+  
+  //   return false;
+  // }
+
   result: function() {
-
-    clearInterval(timer);
-
     $("#timer h2").remove();
 
   }
 };
-
+ 
 // ON CLICK START EVENTS
 
 $(document).on("click", "#start", function() {
@@ -228,8 +234,13 @@ $(document).on("click", "#start", function() {
 });
 
 
-$(document).on("click", "#done", function() {
-  game.done();
-});
+// $(document).on("click", "#done", function() {
+
+        if (timer === 0) {
+           game.done(); 
+      clearInterval(timer);
+    }   
+
+// });
 
 });
