@@ -1,0 +1,111 @@
+
+.jumbotron {
+  background-color: black;
+  font-family: 'Aldrich', sans-serif;
+  font-size: 100px;
+  color: white;
+}
+
+/*game board size, black bkgd, centered*/
+html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+
+    background-color: black;
+  }
+  
+  body > div { 
+    margin: 120px auto;
+    text-align: center;
+  }
+  
+  
+  
+  /*game squares*/
+  .tile {
+    
+    width: 50px;
+    height: 50px;
+    display: inline-block;
+    vertical-align: top;
+    border-radius: 10%;
+  }
+  
+  #highscore-div {
+    background-color: black;
+    font-family: 'Aldrich', sans-serif;
+    font-size: 30px;
+    color: white;
+  }
+  
+  #destination {
+    background-color: black;
+    font-family: 'Aldrich', sans-serif;
+    font-size: 30px;
+    color: white;
+  }
+
+  /* Walls of board (squares) */
+  .wall {
+    background-color: blue;
+    border: 2px solid lightgrey;
+    
+  }
+  
+  /* Coins bigger or smaller w/transform scale, rounded with the radius */
+  .coin {
+    background-color: yellow;
+    border-radius: 50%;
+    transform: scale(0.3);
+  }
+  
+  /*wimage displayed depending on where pacman is looking*/
+  .pacman {
+    
+  }
+  
+
+/*  .pacman img{
+    width: 50px;
+    height: 50px;
+  }*/
+  
+/*  .left {
+    background-image: url("/Users/AdventureGirl/Desktop/Project-1/Project-1/assets/Images/Sunny_PacDog.png");
+  }
+  
+  .up {
+    background-image: url("/Users/AdventureGirl/Desktop/Project-1/Project-1/assets/Images/Sunny_PacDog.png");
+  }
+  
+  .down {
+    background-image: url("/Users/AdventureGirl/Desktop/Project-1/Project-1/assets/Images/Sunny_PacDog.png");
+  }*/
+
+  .dogcatcher1 {
+    background-image: url("");
+  }
+
+  /* Beginning of css for selecting PacDog image*/
+div.rounded {
+  width: 50%;
+  border-style: solid;
+  border-width: 2px;
+  border-radius: 5px;
+}
+label {
+  display: block;
+  background-color: cornflowerblue;
+}
+input {
+  display: block;
+
+}
+
+/*End of css for selecting an image*/
