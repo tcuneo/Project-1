@@ -1,3 +1,11 @@
+.container {
+  margin: 0 auto;
+  width: 80vw;
+  max-width: 60vh;
+  height: 80vw;
+  max-height: 60vh;
+
+}
 
 .jumbotron {
   background-color: black;
@@ -22,7 +30,7 @@ html {
   
   body > div { 
     margin: 120px auto;
-    text-align: center;
+    
   }
   
   
@@ -35,13 +43,34 @@ html {
     display: inline-block;
     vertical-align: top;
     border-radius: 10%;
+     flex: 1 0 auto;
+    position: relative; 
   }
   
+.tile:after {
+    content: "";
+    float:left;
+    display: block;
+    padding-top: 100%;
+}
+
+.tile .inner {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
   #highscore-div {
     background-color: black;
     font-family: 'Aldrich', sans-serif;
     font-size: 30px;
     color: white;
+    padding: 20px;
   }
   
   #destination {
@@ -49,6 +78,16 @@ html {
     font-family: 'Aldrich', sans-serif;
     font-size: 30px;
     color: white;
+    float: center;
+    padding: 10px;
+  }
+
+  #timer {
+    background-color: black;
+    font-family: 'Aldrich', sans-serif;
+    font-size: 30px;
+    color: white;
+    padding: 20px;
   }
 
   /* Walls of board (squares) */
@@ -101,7 +140,7 @@ div.rounded {
 }
 label {
   display: block;
-  background-color: cornflowerblue;
+  background-color: blue;
 }
 input {
   display: block;

@@ -185,10 +185,74 @@ $(document).ready(function() {
     });
   }
 
+
+
+
+  //new code for timer 
+  var timer;
+  
+
+ var game = {
+
+  counter: 5,
+
+  countdown: function() {
+    game.counter--;
+    $("#counter-number").html(game.counter);
+    if (game.counter === 0) {
+      console.log("TIME UP");
+      game.done();
+      clearInterval(timer); 
+    }
+  },
+
+  start: function() {
+    timer = setInterval(game.countdown, 1000);
+
+    $("#timer").prepend("<h2>Time Remaining: <span id='counter-number'>5</span> s</h2>");
+
+    $("#start").remove();
+
+
+
+  },
+
+  //  stopinterval: function(){
+
+
+  
+  //   return false;
+  // }
+
+  result: function() {
+    $("#timer h2").remove();
+
+  }
+};
+ 
+// ON CLICK START EVENTS
+
+$(document).on("click", "#start", function() {
+  game.start();
+
+});
+
+
+
+
+
+
+
+
+
+
   function main() {
     drawMap();
     setupKeyboardControls();
   }
 
   main();
+
+  
+
 });
