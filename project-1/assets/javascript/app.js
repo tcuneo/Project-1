@@ -1,4 +1,8 @@
 $(document).ready(function() {
+  
+  
+  
+  
   var backgroundDog = "";
 
   /*creating the game board - pretty simple at this point*/
@@ -196,16 +200,6 @@ $(document).ready(function() {
 
   counter: 5,
 
-  countdown: function() {
-    game.counter--;
-    $("#counter-number").html(game.counter);
-    if (game.counter === 0) {
-      console.log("TIME UP");
-      game.done();
-      clearInterval(timer); 
-    }
-  },
-
   start: function() {
     timer = setInterval(game.countdown, 1000);
 
@@ -214,8 +208,21 @@ $(document).ready(function() {
     $("#start").remove();
 
 
-
   },
+
+  countdown: function() {
+    game.counter--;
+    $("#counter-number").html(game.counter);
+    if (game.counter === 0) {
+      clearInterval(timer);
+       $("#timer").html("Game Over!"); 
+
+      // game.done();
+       
+    console.log("TIME UP");
+    }
+  },
+
 
   //  stopinterval: function(){
 
@@ -228,30 +235,32 @@ $(document).ready(function() {
     $("#timer h2").remove();
 
   }
+
+
 };
- 
-// ON CLICK START EVENTS
-
-$(document).on("click", "#start", function() {
-  game.start();
-
-});
-
-
-
-
-
-
-
-
 
 
   function main() {
+
     drawMap();
     setupKeyboardControls();
   }
 
   main();
+
+
+  
+// ON CLICK START EVENTS
+
+$(document).on("click", "#start", function() {
+ 
+ 
+  game.start();
+
+
+
+});
+
 
   
 
