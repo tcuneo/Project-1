@@ -195,13 +195,13 @@ $(document).ready(function() {
 
 // YouTube 
 
-/*var tag = document.createElement('script');
+var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/player_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
 var playlistID = 'PLLmfuNiEhQopjCMvc_OyrIa1g9rkdXUKq'
-var queryURL = "https: www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLLmfuNiEhQopjCMvc_OyrIa1g9rkdXUKq&autostart=1&controls=0&showinfo=0&fs=0&rel=0&key=4e837dc429e7f628b193c5a09a94594cc41c2d8a",	
+var queryURL = "https//: www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLLmfuNiEhQopjCMvc_OyrIa1g9rkdXUKq&autostart=1&controls=0&showinfo=0&fs=0&rel=0&key=AIzaSyDpHolcM49mui0yK8fCPRtjuCmazywXcJk";	
 
 $.ajax({
 url:  queryURL,
@@ -237,4 +237,4 @@ method: "GET"
        if(el.data === 1) {
            jQuery('#ytplayer').hide();
        }
-   }*/
+   }
