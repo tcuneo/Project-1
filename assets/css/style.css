@@ -12,7 +12,7 @@ html {
     background-color: black;
   }
   
-  body > div { 
+  body { 
     margin: 120px auto;
     text-align: center;
   }
@@ -89,6 +89,7 @@ label {
   background-color: cornflowerblue;
 }
 input {
+  text-align: center;
   display: block;
 
 }
