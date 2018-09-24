@@ -192,3 +192,49 @@ $(document).ready(function() {
 
   main();
 });
+
+// YouTube 
+
+/*var tag = document.createElement('script');
+tag.src = "https://www.youtube.com/player_api";
+var firstScriptTag = document.getElementsByTagName('script')[0];
+firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+var playlistID = 'PLLmfuNiEhQopjCMvc_OyrIa1g9rkdXUKq'
+var queryURL = "https: www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLLmfuNiEhQopjCMvc_OyrIa1g9rkdXUKq&autostart=1&controls=0&showinfo=0&fs=0&rel=0&key=4e837dc429e7f628b193c5a09a94594cc41c2d8a",	
+
+$.ajax({
+url:  queryURL,
+method: "GET"
+}); 
+
+   var player;
+   function onYouTubeIframeAPIReady() {
+       player = new YT.Player('ytplayer', {
+         width:'640',
+         height:'360',
+          videoId: 'PLLmfuNiEhQopjCMvc_OyrIa1g9rkdXUKq',
+           playerVars: {
+             color: 'blue',
+               mute: 1,
+               autoplay: 1,
+               loop: 1,
+               controls: 0,
+               showinfo: 0,
+               autohide: 0,
+               enablejsapi: 1,
+               modestbranding: 0,
+               playlist: 'PLLmfuNiEhQopjCMvc_OyrIa1g9rkdXUKq',
+               vq: 'hd1080'
+           },
+           allowfullscreen: 0,
+           events: {
+               'onStateChange': onPlayerStateChange
+           }
+       });
+   }
+   function onPlayerStateChange(el) {
+       if(el.data === 1) {
+           jQuery('#ytplayer').hide();
+       }
+   }*/
