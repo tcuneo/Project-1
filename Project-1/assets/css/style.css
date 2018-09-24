@@ -1,0 +1,153 @@
+* {
+  box-sizing: border-box;
+}
+
+.flex-container{
+  display: flex!important;
+  justify-content: center;
+
+}
+
+#title {
+  background-color: black!important;
+  font-family: 'Aldrich', sans-serif;
+  font-size: 75px;
+  color: white!important;
+}
+
+#instructions {
+  font-family: 'Aldrich', sans-serif;
+  color: white;  
+  padding: 20px;
+}
+
+#timer {
+  font-family: 'Aldrich', sans-serif;
+  color: white;  
+  padding: 20px;
+}
+
+#highscore-div {
+  padding: 20px;
+  background-color: black;
+  font-family: 'Aldrich', sans-serif;
+  font-size: 30px;
+  color: white;
+  text-align: center;
+}
+
+
+/*game board size, black bkgd, centered*/
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit ;
+}
+
+body {
+  background-color: black!important;
+  padding: 20px;
+  font-family: 'Aldrich', sans-serif!important;
+  text-align: center!important;
+}
+
+body > div { 
+  margin: 120px auto;
+  text-align: center;
+}
+
+
+
+/*game squares*/
+.tile {
+
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  vertical-align: top;
+  border-radius: 10%;
+}
+
+div {
+  
+  float: center;
+
+}
+
+
+/* Walls of board (squares) */
+.wall {
+  background-color: blue;
+  border: 2px solid lightgrey;
+  
+}
+
+.coin {
+  /* background-color: yellow; */
+  /* background-image: url("https://giphy.com/embed/3ohhwqkQej5tvcn5NC"); */
+  background-image: url("https://media.giphy.com/media/3ohhwqkQej5tvcn5NC/giphy.gif");
+  background-size: cover;
+  /* border-radius: 50%; */
+  /* transform: scale(0.3); */
+}
+
+
+/*wimage displayed depending on where pacman is looking*/
+.pacman {
+
+  
+}
+
+
+/*  .pacman img{
+  width: 50px;
+  height: 50px;
+}*/
+
+/*  .left {
+  background-image: url("/Users/AdventureGirl/Desktop/Project-1/Project-1/assets/Images/Sunny_PacDog.png");
+}
+
+.up {
+  background-image: url("/Users/AdventureGirl/Desktop/Project-1/Project-1/assets/Images/Sunny_PacDog.png");
+}
+
+.down {
+  background-image: url("/Users/AdventureGirl/Desktop/Project-1/Project-1/assets/Images/Sunny_PacDog.png");
+}*/
+
+.dogcatcher1 {
+  background-image: url("");
+}
+
+/* Beginning of css for selecting PacDog image*/
+div.rounded {
+width: 100%;
+border-style: solid;
+border-width: 2px;
+border-radius: 5px;
+}
+label {
+  float: center;
+display: block;
+background-color: black;
+font-family: 'Aldrich', sans-serif;
+font-size: 16px;
+color: white;
+float: center;
+/* background-color: blue; */
+}
+input {
+display: block;
+padding: 20px;
+background-color: black;
+font-family: 'Aldrich', sans-serif;
+font-size: 16px;
+color: white;
+float: center;
+
+}
+
+/*End of css for selecting an image*/
