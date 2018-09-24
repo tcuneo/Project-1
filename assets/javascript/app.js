@@ -216,7 +216,7 @@ method: "GET"
           videoId: 'PLLmfuNiEhQopjCMvc_OyrIa1g9rkdXUKq',
            playerVars: {
              color: 'blue',
-               mute: 1,
+               mute: 0,
                autoplay: 1,
                loop: 1,
                controls: 0,
