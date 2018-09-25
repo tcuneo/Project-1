@@ -213,7 +213,7 @@ method: "GET"
        player = new YT.Player('ytplayer', {
          width:'640',
          height:'360',
-          videoId: 'PLLmfuNiEhQopjCMvc_OyrIa1g9rkdXUKq',
+          videoId: 'J2DXnqPwGo',
            playerVars: {
              color: 'blue',
                mute: 0,
@@ -221,7 +221,7 @@ method: "GET"
                loop: 1,
                controls: 0,
                showinfo: 0,
-               autohide: 0,
+               autohide: 1,
                enablejsapi: 1,
                modestbranding: 0,
                playlist: 'PLLmfuNiEhQopjCMvc_OyrIa1g9rkdXUKq',
@@ -229,11 +229,12 @@ method: "GET"
            },
            allowfullscreen: 0,
            events: {
-               'onStateChange': onPlayerStateChange
+          
+             'onStateChange': onPlayerStateChange
            }
        });
    }
-   function onPlayerStateChange(el) {
+  function onPlayerStateChange(el) {
        if(el.data === 1) {
            jQuery('#ytplayer').hide();
        }
