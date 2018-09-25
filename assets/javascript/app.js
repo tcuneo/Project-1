@@ -155,7 +155,10 @@ $("")
         console.log("NOM NOM");
         pacman.score += 5;
         console.log(pacman.score);
-        $("#highscore-div").html("Highscore: " + pacman.score);
+        if (game.counter > 0) {
+           $("#highscore-div").html("Highscore: " + pacman.score);
+        }
+       
 
       }
 
@@ -209,7 +212,7 @@ $("")
   
   var game = {
 
-  counter: 5,
+  counter: 0,
 
   start: function() {
     timer = setInterval(game.countdown, 1000);
@@ -270,8 +273,8 @@ $("")
   
 // ON CLICK START EVENTS
 
-$(document).on("click", function() {
-
+$("#start").on("click", function() {
+  game.counter = 10;
   game.start();
   $("#instructions").html();
 
