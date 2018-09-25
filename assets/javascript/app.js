@@ -1,4 +1,8 @@
 $(document).ready(function() {
+  
+  
+  
+  
   var backgroundDog = "";
 
   /*creating the game board - pretty simple at this point*/
@@ -34,6 +38,7 @@ $(document).ready(function() {
     direction: "right"
   };
 
+
   /*js for user adding new image for PacDog*/
   document.getElementById("upload-file").addEventListener("change", function() {
     var file;
@@ -57,6 +62,8 @@ $(document).ready(function() {
   });
   /*end of js for user adding new image for PacDog*/
 
+
+  // Function to create tiles
   function createTiles(data) {
     // We'll keep the DOM elements in an array.
     var tilesArray = [];
@@ -103,7 +110,10 @@ $(document).ready(function() {
     // At the end of our function, we return the array
     // of configured tiles.
     return tilesArray;
+      
   }
+
+$("")
 
   // This function creates a map element, fills it with tiles,
   // and adds it to the page.
@@ -157,7 +167,7 @@ $(document).ready(function() {
     }
   }
 
-  function nomCount() {}
+  // function nomCount() {}
 
   function setupKeyboardControls() {
     document.addEventListener('keydown', function (e) {
@@ -185,13 +195,100 @@ $(document).ready(function() {
     });
   }
 
+
+
+
+
+
+
+
+
+  //new code for timer  and stop/restart game
+
+  var timer;
+  
+  var game = {
+
+  counter: 5,
+
+  start: function() {
+    timer = setInterval(game.countdown, 1000);
+
+    // $("#sub-wrapper").(game);
+
+    $("#timer").prepend("<h2>Time Remaining: <span id='counter-number'>5</span> s</h2>");
+
+    $("#start").remove();
+
+
+  },
+
+  countdown: function() {
+    $("#counter-number").html(game.counter);
+    if (game.counter === 0) {
+      clearInterval(timer);
+      $("#timer").html("Game Over!");
+
+    }
+
+    else (game.counter--)
+
+  },
+
+
+
+  // done: function() {
+  //   $("#timer h2").remove();
+
+  // }
+
+
+};
+
+
+// function call for map and keyboard control functions
+
   function main() {
+
     drawMap();
     setupKeyboardControls();
   }
 
   main();
+
+
+
+
+
+
+
+
+
+
+
+
+  
+// ON CLICK START EVENTS
+
+$(document).on("click", function() {
+
+  game.start();
+  $("#instructions").html();
+
+
+  
+
+
+
 });
+
+  if (game.timer === 0) {
+
+  }
+  
+
+});
+
 
 // YouTube 
 
