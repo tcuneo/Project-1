@@ -285,25 +285,23 @@ $(document).on("click", function() {
   if (game.timer === 0) {
 
   }
-  
 
-});
-
-
-// YouTube 
+  // YouTube 
 
 var tag = document.createElement('script');
 tag.src = "https://www.youtube.com/player_api";
 var firstScriptTag = document.getElementsByTagName('script')[0];
 firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 
-var playlistID = 'PLLmfuNiEhQopjCMvc_OyrIa1g9rkdXUKq'
-var queryURL = "https//: www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLLmfuNiEhQopjCMvc_OyrIa1g9rkdXUKq&autostart=1&controls=0&showinfo=0&fs=0&rel=0&key=AIzaSyDpHolcM49mui0yK8fCPRtjuCmazywXcJk";	
+var playlistID = 'PLLmfuNiEhQopjCMvc_OyrIa1g9rkdXUKq';
+var queryURL = "https://www.googleapis.com/youtube/v3/playlistItems?part=snippet&playlistId=PLLmfuNiEhQopjCMvc_OyrIa1g9rkdXUKq&autostart=1&controls=0&showinfo=0&fs=0&rel=0&key=AIzaSyDpHolcM49mui0yK8fCPRtjuCmazywXcJk"; 
 
 $.ajax({
 url:  queryURL,
 method: "GET"
-}); 
+}).then(function(response) {
+      console.log(response);
+    });
 
    var player;
    function onYouTubeIframeAPIReady() {
@@ -331,8 +329,14 @@ method: "GET"
            }
        });
    }
-  function onPlayerStateChange(el) {
+   
+   function onPlayerStateChange(el) {
        if(el.data === 1) {
            jQuery('#ytplayer').hide();
        }
    }
+  
+
+});
+
+
