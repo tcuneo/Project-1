@@ -1,8 +1,5 @@
 $(document).ready(function() {
   
-  
-  
-  
   var backgroundDog = "";
 
   /*creating the game board - pretty simple at this point*/
@@ -30,7 +27,7 @@ $(document).ready(function() {
 
   var map;
 
-  /*starting location of pacman, "0" being first count*/
+  //starting location of pacman, "0" being first count//
   var pacman = {
     x: 10,
     y: 8,
@@ -43,12 +40,12 @@ $(document).ready(function() {
   document.getElementById("upload-file").addEventListener("change", function() {
     var file;
     var destination = $(".pacman");
-
+// Creating loop through File Reader
     for (var x = 0, xlen = this.files.length; x < xlen; x++) {
       file = this.files[x];
       if (file.type.indexOf("image") != -1) {
         var reader = new FileReader();
-
+// New API technology that does not require an ajax call
         reader.onload = function(e) {
           var img = new Image(50, 50);
           img.src = e.target.result;
@@ -60,7 +57,7 @@ $(document).ready(function() {
       }
     }
   });
-  /*end of js for user adding new image for PacDog*/
+  // End of js for user adding new image for PacDog
 
 
   // Function to create tiles
@@ -167,22 +164,20 @@ $("")
     }
   }
 
-  // function nomCount() {}
-
   function setupKeyboardControls() {
     document.addEventListener('keydown', function (e) {
       event.preventDefault();
       
-      if (e.keyCode === 37) {         // left arrow is 37
+      if (e.keyCode === 65) {         // A key is 65 and 'left'
         movePacman('left');
   
-      } else if (e.keyCode === 38) {  // up arrow is 38
+      } else if (e.keyCode === 87) {  // W key is 87 and 'up'
         movePacman('up');
   
-      } else if (e.keyCode === 39){   // right arrow is 39
+      } else if (e.keyCode === 68){   // D key is 68 and 'right'
         movePacman('right');
   
-      } else if (e.keyCode === 40){   // down arrow is 40
+      } else if (e.keyCode === 83){   // S key is 83 and 'down'
         movePacman('down');
 
       }
