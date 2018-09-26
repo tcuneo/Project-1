@@ -13,9 +13,6 @@
   <!--Link to Bootstrap-->
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
-
-
-
 <body>
   <div class="flex-container"></div>
     <div class="row">
@@ -25,27 +22,18 @@
       </div>
     </div>
        </div>
-
   <!-- Instructions Row -->
   <div class="row" id="instructions">
     <div class="col-md-6">
-      <h4>First: Select Your Image!</h4>
+      <h4>First: Add Your PacDog!</h4>
       <p>(Insider Tip: Use An Image That Is Centered For Best Quality)</p>
-    </div>
-  <div class="col-md-6">
-      <h4>Second: Click Start To Begin Game!</h4>
-      <p>...Ready, Set, Go!</p>
-  </div>
-</div>
-<!-- New Row -->
-<div class="row">
-
   <!--This will create div for selecting the new PacDog image-->
   <div class="col-md-6">
     <div id="destination" class="rounded">
       <label for="chooseFiles">Add Your Own PacDog!</label>
       <input class="btn btn-primary" type="file" id="upload-file" multiple="multiple" />
     </div>
+    <!--end of html for selecting image-->
   </div>
 <!--end of html for selecting image-->
 <br>
@@ -53,7 +41,6 @@
   </div>
 </div>
 <!--Div for giphy dog buttons-->
-
   <div>
     <p style="color: white;">No dog of your own? <br>
       Choose and save one of these PacDogs!"<p>
@@ -62,42 +49,42 @@
   </div>
 </div>
 <!--End of Giphy div-->
-
-
-
+<!-- New Row -->
+<div class="row" id="time">
+<!--Div for giphy dog buttons-->
+    <div class="col-md-6">
+    <p style="color: white;">No dog of your own? <br>
+      Choose and save one of these PacDogs!<p>
+    <div id="animal-buttons"></div>
+    <div id="animals"></div>
+  </div>
+<!--End of Giphy div-->
+  <div class="col-md-6">
+      <h4>Second: Click Start To Begin Game!</h4>
+      <p>...Ready, Set, Go!</p>    
+      <div id="timer">
+    <!--Timer--> 
     <!--Timer-->
   
     <div id="timer">
     <button class="btn btn-primary" type="button" id="start">Start Game</button> 
-    </div>
+    </div> 
   </div>
 </div>
-
-
-
   
-
-
-
-
-
-
   <!-- <div class="col-md-3">
       <input class="btn btn-primary" type="reset" value="Reset">
   </div> -->
-
 </div>  
-
 <!-- High Score Div -->
 <div class="row">
   <div class="col-md-12">
       <div id="highscore-div"></div>
   </div>
 </div>
-
-
-
-
+  </div>
+</div>
+</div>  
   <script src="https://www.gstatic.com/firebasejs/5.5.0/firebase.js"></script>
   <script>
       // Initialize Firebase
@@ -111,11 +98,9 @@
       };
       firebase.initializeApp(config);
   </script>
-
 <!-- <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
  --><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-
   <script src="assets/javascript/app.js"></script>
   </div>
 </body> 
@@ -123,3 +108,5 @@
     </div>
 </div>
 </html>
+
+
