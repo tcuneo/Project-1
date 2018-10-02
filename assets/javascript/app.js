@@ -76,7 +76,7 @@ $(document).ready(function() {
       $(this).addClass("active");
   
       var type = $(this).attr("data-type");
-      var queryURL = "http://api.giphy.com/v1/gifs/search?q=" + type + "&api_key=BkXVXu1cY1zcq3307RTRx8l82CE0ThYq";
+      var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + type + "&api_key=BkXVXu1cY1zcq3307RTRx8l82CE0ThYq";
   
       $.ajax({
         url: queryURL,
